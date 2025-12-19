@@ -1,0 +1,35 @@
+{
+  "args": {
+    "onnx_path": "/mnt/nas/xinjiang/code/nyz/FreeNet-master/trained_models/model.onnx",
+    "engine_path": "/mnt/nas/xinjiang/code/nyz/FreeNet-master/trained_models/model.plan",
+    "num_bands": 100,
+    "iterations": 100,
+    "warmup": 10,
+    "output_dir": "benchmark_results",
+    "test_all": true,
+    "test_specific": "380-1050,400-2500,400-1000"
+  },
+  "results": [
+    {
+      "height": 400,
+      "width": 1000,
+      "input_shape": [
+        1,
+        100,
+        400,
+        1000
+      ],
+      "mean": 1359.173106555827,
+      "std": 49.03328845874609,
+      "min": 1247.5901367142797,
+      "max": 1529.1650262661278,
+      "median": 1355.9804933611304,
+      "p95": 1437.2060514753684,
+      "p99": 1469.8630063002931,
+      "fps": 0.7357414557252541,
+      "backend": "ONNX"
+    }
+  ],
+  "timestamp": "20251216_171125",
+  "tensorrt_version": "10.14.1.48.post1"
+}

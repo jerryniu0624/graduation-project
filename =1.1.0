@@ -1,0 +1,25 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Requirement already satisfied: pip in /home/jerry/.local/lib/python3.7/site-packages (23.1.2)
+Collecting install
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/4d/c8/8cbca135f9e167810756ea2bc34b028501936675fcbd7dadccf752fa4622/install-1.3.5-py3-none-any.whl (3.2 kB)
+Collecting torch
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/00/86/77a9eddbf46f1bca2468d16a401911f58917f95b63402d6a7a4522521e5d/torch-1.13.1-cp37-cp37m-manylinux1_x86_64.whl (887.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.5/887.5 MB 2.7 MB/s eta 0:00:00
+Collecting typing-extensions (from torch)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Collecting nvidia-cuda-runtime-cu11==11.7.99 (from torch)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/36/92/89cf558b514125d2ebd8344dd2f0533404b416486ff681d5434a5832a019/nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 5.1 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.5.0.96 (from torch)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/dc/30/66d4347d6e864334da5bb1c7571305e501dcb11b9155971421bb7bb5315f/nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 2.6 MB/s eta 0:00:00
+Collecting nvidia-cublas-cu11==11.10.3.66 (from torch)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ce/41/fdeb62b5437996e841d83d7d2714ca75b886547ee8017ee2fe6ea409d983/nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 4.1 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99 (from torch)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ef/25/922c5996aada6611b79b53985af7999fc629aee1d5d001b6a22431e18fec/nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 5.7 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in /home/jerry/openmmlab/ENTER/envs/FreeNetNoResidual/lib/python3.7/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (65.6.3)
+Requirement already satisfied: wheel in /home/jerry/openmmlab/ENTER/envs/FreeNetNoResidual/lib/python3.7/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (0.38.4)
+Installing collected packages: typing-extensions, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, install, nvidia-cudnn-cu11, torch
+Successfully installed install-1.3.5 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 torch-1.13.1 typing-extensions-4.7.1

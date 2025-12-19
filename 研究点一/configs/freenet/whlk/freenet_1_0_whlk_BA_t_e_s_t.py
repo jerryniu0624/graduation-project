@@ -1,0 +1,86 @@
+config = dict(
+    model=dict(
+        type='FreeNetBS_test',
+        params=dict(
+            in_channels=270, # 270
+            # out_channels=3,
+            hidden_channels=20,
+            minBand = 400,
+            maxBand = 700, # 这里不对
+            nBandDataset = 32,
+            dataset = 'LK',
+            num_classes=6,
+            block_channels=(96, 128, 192, 256),
+            inner_dim=128,
+            reduction_ratio=1.0,
+        )
+    ),
+    data=dict(
+        train=dict(
+            type='NewLongKouLoader',
+            params=dict(
+                num_workers=0,
+                image_mat_path='./WHU-Hi-LongKou/WHU_Hi_LongKou.mat',
+                gt_mat_path='./WHU-Hi-LongKou/WHU_Hi_LongKou_gt.mat',
+                training=True,
+                num_train_samples_per_class=10,
+                sub_minibatch=20000,
+                slic = True,
+                n_segments = 1000
+
+            )
+        ),
+        test=dict(
+            type='NewLongKouLoader',
+            params=dict(
+                num_workers=0,
+                image_mat_path='./WHU-Hi-LongKou/WHU_Hi_LongKou.mat',
+                gt_mat_path='./WHU-Hi-LongKou/WHU_Hi_LongKou_gt.mat',
+                training=False,
+                num_train_samples_per_class=0,
+                sub_minibatch=20,
+                slic = False,
+                n_segments = 1000
+            )
+        )
+    ),
+    optimizer=dict(
+        type='sgd',
+        params=dict(
+            momentum=0.9,
+            weight_decay=0.001
+        )
+    ),
+    learning_rate=dict(
+        type='poly',
+        params=dict(
+            base_lr=0.001,
+            power=0.9,
+            max_iters=1000),
+    ),
+    train=dict(
+        forward_times=1,
+        num_iters=1000,
+        eval_per_epoch=True,
+        summary_grads=False,
+        summary_weights=False,
+        eval_after_train=True,
+        resume_from_last=False,
+    ),
+    test=dict(
+        draw=dict(
+            image_size=(145, 145),
+            palette=[
+                0, 0, 0,
+                192, 192, 192,
+                0, 255, 1,
+                0, 255, 255,
+                0, 128, 1,
+                255, 0, 254,
+                165, 82, 40,
+                129, 0, 127,
+                255, 0, 0,
+                255, 255, 0, ]
+        )
+    ),
+)
